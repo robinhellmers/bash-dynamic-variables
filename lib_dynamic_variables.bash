@@ -57,3 +57,15 @@ append_dynamic_array()
     # Append to array
     read -r "${array_name}[${len}]" <<< "$value"
 }
+
+get_dynamic_array()
+{
+    local array_name="$1"
+
+    dynamic_array=()
+    dynamic_array_len="$(get_dynamic_array_len $array_name)"
+    for (( i=0; i < dynamic_array_len; i++ ))
+    do
+        dynamic_array+=("$(get_dynamic_element $array_name $i)")
+    done
+}
