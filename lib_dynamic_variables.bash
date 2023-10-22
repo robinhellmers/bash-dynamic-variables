@@ -69,3 +69,11 @@ get_dynamic_array()
         dynamic_array+=("$(get_dynamic_element $array_name $i)")
     done
 }
+
+get_dynamic_array_len()
+{
+    local array_name="$1"
+
+    dynamic_array_len=$(eval "echo \${#$array_name[@]}")
+    echo "$dynamic_array_len"
+}
