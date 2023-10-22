@@ -39,3 +39,11 @@ init_lib
 #####################
 ### Library start ###
 #####################
+
+create_dynamic_array()
+{
+    local array_name="$1"
+    shift
+    declare -g -a "$array_name=(\"$@\")"
+}
+
