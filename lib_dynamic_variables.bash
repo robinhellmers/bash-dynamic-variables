@@ -58,6 +58,16 @@ append_dynamic_array()
     read -r "${array_name}[${len}]" <<< "$value"
 }
 
+set_dynamic_array_element()
+{
+    local array_name="$1"
+    local value="$2"
+    local index="$3"
+
+    # Append to array
+    read -r "${array_name}[${index}]" <<< "$value"
+}
+
 get_dynamic_array_element()
 {
     local array_name="$1"
