@@ -47,3 +47,13 @@ create_dynamic_array()
     declare -g -a "$array_name=(\"$@\")"
 }
 
+append_dynamic_array()
+{
+    local array_name="$1"
+    local value="$2"
+    # Get length of array
+    eval eval "local len=\${#${array_name}[@]}"
+
+    # Append to array
+    read -r "${array_name}[${len}]" <<< "$value"
+}
