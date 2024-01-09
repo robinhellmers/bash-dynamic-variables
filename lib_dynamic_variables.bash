@@ -40,6 +40,17 @@ init_lib
 ### Library start ###
 #####################
 
+###
+# List of functions for usage outside of lib
+#
+# - create_dynamic_array()
+# - append_dynamic_array()
+# - set_dynamic_array_element()
+# - get_dynamic_array_element()
+# - get_dynamic_array()
+# - get_dynamic_array_len()
+###
+
 create_dynamic_array()
 {
     local array_name="$1"
