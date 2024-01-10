@@ -96,7 +96,7 @@ get_dynamic_array()
     dynamic_array_len="$(get_dynamic_array_len $array_name)"
     for (( i=0; i < dynamic_array_len; i++ ))
     do
-        dynamic_array+=("$(get_dynamic_element $array_name $i)")
+        dynamic_array+=("$(get_dynamic_array_element $array_name $i)")
     done
 }
 
